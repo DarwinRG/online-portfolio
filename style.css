@@ -1,39 +1,38 @@
-/* global */
+/* whole page */
 
-
-.grid-2 {
+.column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(135deg, #333333 50%, #242424 50%);
+    background-image: linear-gradient(135deg, #4F4A45 50%, #6C5F5B 50%);
     background-repeat: repeat;
-    color: #c3c7cd;
-
+    color: #F6F1EE;
 }
 
-h2, .white {
-    color: #fff;
+h2 {
+    color: #ED7D31;
 }
 
-
-/* section 1 */
-.section-1 {
+/* Profile Box */
+.profile-box {
     padding-top: 40vh;
     text-align: center;
 }
 
-.section-1 p {
-    font-size: 1.1rem;
+
+.profile-box p {
+    font-size: 1rem;
     padding-bottom: 10px;
     margin: 0;
 }
 
-.section-1 h2 {
+.profile-box h2 {
     font-size: 1.7rem;
     margin-bottom: 10px;
 }
@@ -45,6 +44,7 @@ h2, .white {
     margin: 0 auto;
     display: block;
     margin-bottom: 20px;
+    border: black solid 1px;
 }
 
 .social-media-icons {
@@ -56,77 +56,123 @@ h2, .white {
 
 .social-media-icons img {
     margin-right: 10px;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
+    filter: invert(100%);
 }
 
-/* section 2 */
-.section-2 {
+/* main box */
+.main-box {
     padding-top: 10vh;
     width: 70%;
 }
 
-.section-2 h2 {
-    font-size: 1.7rem;
+.main-box h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.section-2 p {
+.main-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.main-box p {
     font-size: 1rem;
     padding-bottom: 10px;
     margin: 0;
 }
 
+.personal-details {
+    margin-left: 10px;
+}
+
+.personal-details ul {
+    list-style: square;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.personal-details ul li {
+    padding-bottom: 5px;
+}
+
 .education ul {
     list-style: disc;
-    font-size: 1.3rem;
-    font-weight: bold;;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
-.education ul p {
+
+.education ul p, .organizations ul p, .projects ul p, .certificates ul p {
     margin-bottom: 10px;
     font-weight: normal;
 }
-.section-2 a {
-    display: block;
-    padding: 5px;
-    font-size: 1.2rem;
-    padding-left: 0;
-    width: 100px;
+
+.organizations ul, .projects ul, .work_experience ul {
+    list-style: disc;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-/* animations / utilities */
-.section-2 a:hover {
+
+.main-box a {
+    display: block;
+    padding: 5px;
+    font-size: 1.1rem;
+    padding-left: 0;
+    width: 100px;
+    color: #fff;
+}
+
+.certificates ul {
+    list-style: square;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.certificates ul li {
+    margin-bottom: 10px;
+}
+
+
+/*  utils */
+.main-box a:hover {
     font-size: 1.3rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
 }
 
-.section-1 a:hover {
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
+.social-media-icons img:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
 }
 
-.white:hover {
-    position: relative;
-    padding-left: 10px;
-}
-
-/* media queres */
-@media(max-width:780px) {
-    .grid-2 {
+/* responsiveness */
+@media (max-width: 780px) {
+    .column {
         grid-template-columns: 1fr;
     }
 
-    .section-1 {
+    .profile-box {
         padding: 0;
         padding-top: 5rem;
     }
 
-    .section-2 {
+    .main-box {
         padding: 0;
         padding-left: 1.5rem;
         padding-top: 2rem;
     }
+    .personal-details ul, .education ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
 }
