@@ -9,13 +9,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(135deg, #4F4A45 50%, #6C5F5B 50%);
+    background-image: linear-gradient(135deg, #4f4a45 50%, #6c5f5b 50%);
     background-repeat: repeat;
-    color: #F6F1EE;
+    color: #f6f1ee;
 }
 
 h2 {
-    color: #ED7D31;
+    color: #ed7d31;
 }
 
 /* Profile Box */
@@ -23,7 +23,6 @@ h2 {
     padding-top: 40vh;
     text-align: center;
 }
-
 
 .profile-box p {
     font-size: 1rem;
@@ -107,18 +106,22 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.education ul p, .organizations ul p, .projects ul p, .certificates ul p {
+.education ul p,
+.organizations ul p,
+.projects ul p,
+.certificates ul p {
     margin-bottom: 10px;
     font-weight: normal;
 }
 
-.organizations ul, .projects ul, .work_experience ul {
+.organizations ul,
+.projects ul,
+.work_experience ul {
     list-style: disc;
     font-size: 1.1rem;
     font-weight: bold;
     margin-left: 10px;
 }
-
 
 .main-box a {
     display: block;
@@ -139,7 +142,6 @@ h2 {
 .certificates ul li {
     margin-bottom: 10px;
 }
-
 
 /*  utils */
 .main-box a:hover {
@@ -171,8 +173,8 @@ h2 {
         padding-top: 2rem;
     }
 
-    .personal-details ul, .education ul {
+    .personal-details ul,
+    .education ul {
         grid-template-columns: 1fr;
     }
-
 }
