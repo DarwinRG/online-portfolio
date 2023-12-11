@@ -9,9 +9,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(135deg, #4f4a45 50%, #6c5f5b 50%);
+    background-image: linear-gradient(135deg, #222831 50%, #393E46 50%);
     background-repeat: repeat;
-    color: #f6f1ee;
+    color: #EEEEEE;
 }
 
 h2 {
@@ -33,6 +33,7 @@ h2 {
 .profile-box h2 {
     font-size: 1.7rem;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
 }
 
 .profile-img {
@@ -42,7 +43,7 @@ h2 {
     margin: 0 auto;
     display: block;
     margin-bottom: 20px;
-    border: black solid 1px;
+    border: 3px solid black;
 }
 
 .social-media-icons {
@@ -69,11 +70,13 @@ h2 {
 .main-box h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
 }
 
 .main-box h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
 }
 
 .main-box p {
@@ -82,9 +85,20 @@ h2 {
     margin: 0;
 }
 
-.personal-details {
+.personal-details,
+.education,
+.organizations,
+.projects,
+.work_experience,
+.certificates {
     margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #395B64;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
 }
+
 
 .personal-details ul {
     list-style: square;
@@ -95,6 +109,7 @@ h2 {
 
 .personal-details ul li {
     padding-bottom: 5px;
+    padding-right: 1rem;
 }
 
 .education ul {
@@ -115,8 +130,7 @@ h2 {
 }
 
 .organizations ul,
-.projects ul,
-.work_experience ul {
+.projects ul {
     list-style: disc;
     font-size: 1.1rem;
     font-weight: bold;
@@ -124,11 +138,9 @@ h2 {
 }
 
 .main-box a {
-    display: block;
     padding: 5px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 0;
-    width: 100px;
     color: #fff;
 }
 
@@ -144,16 +156,43 @@ h2 {
 }
 
 /*  utils */
-.main-box a:hover {
-    font-size: 1.3rem;
-    color: #fff;
+.projects a:hover, .education a:hover {
+    font-size: 1.2rem;
+    color: #ed7d31;
     cursor: pointer;
     transition: 0.2s;
 }
 
+.main-box p:hover, .main-box h2:hover, .main-box h3:hover, .main-box h4:hover, .main-box li:hover {
+    color: #ed7d31;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
 .social-media-icons img:hover {
     transform: scale(1.3);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.personal-details:hover,
+.education:hover,
+.organizations:hover,
+.projects:hover,
+.work_experience:hover,
+.certificates:hover {
+    transform: scale(1.05);
+}
+
+.education a, .personal-details a {
+    text-decoration: none;
 }
 
 /* responsiveness */
@@ -168,9 +207,22 @@ h2 {
     }
 
     .main-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
         padding: 0;
-        padding-left: 1.5rem;
         padding-top: 2rem;
+    }
+
+    .personal-details,
+    .education,
+    .organizations,
+    .projects,
+    .work_experience,
+    .certificates {
+        flex-basis: 70%;
+        margin: 10px auto;
     }
 
     .personal-details ul,
