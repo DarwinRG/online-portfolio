@@ -141,7 +141,7 @@ h2 {
     padding: 5px;
     font-size: 1rem;
     padding-left: 0;
-    color: #fff;
+    color: #EEEEEE;
 }
 
 .certificates ul {
@@ -156,11 +156,15 @@ h2 {
 }
 
 /*  utils */
-.projects a:hover, .education a:hover {
-    font-size: 1.2rem;
+.personal-details a:hover, .projects a:hover, .education a:hover {
+    font-size: 1.1rem;
     color: #ed7d31;
     cursor: pointer;
     transition: 0.2s;
+}
+
+.personal-details a, .projects a, .education a {
+    text-decoration: none;
 }
 
 .main-box p:hover, .main-box h2:hover, .main-box h3:hover, .main-box h4:hover, .main-box li:hover {
@@ -191,9 +195,6 @@ h2 {
     transform: scale(1.05);
 }
 
-.education a, .personal-details a {
-    text-decoration: none;
-}
 
 /* responsiveness */
 @media (max-width: 780px) {
