@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: repeating-linear-gradient(135deg, #222831, #222831 400px, #393E46 400px, #393E46 800px);
+    background-image: repeating-linear-gradient(135deg, #222831, #222831 300px, #393E46 300px, #393E46 700px);
     color: #EEEEEE;
 }
 
